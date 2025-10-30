@@ -1,0 +1,23 @@
+{
+  "name": "daw_jherlan_cliente",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JChoqe/daw_jherlan_cliente.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JChoqe/daw_jherlan_cliente/issues"
+  },
+  "homepage": "https://github.com/JChoqe/daw_jherlan_cliente#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
