@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div id="contenedor" style="border: 2px solid #c0c0c0">
+      <button data-id="1">Botón 1</button>
+      <button data-id="2">Botón 2</button>
+      <p data-id="3" style="height: 50px; background-color: #c0c0c0">
+        Pepino Marino
+      </p>
+    </div>
+
+    <script>
+      // Seleccionamos el div#contenerdor y le añadimos un escuchador de clicks.
+      // Cualquier click dentro del contenedor sera detectado. Delegacion de eventos.
+      document
+        .getElementById("contenedor")
+        .addEventListener("click", function (event) {
+          // Muestras el elemento al que se ha hecho clik "event.target,tagName"
+          console.log("event.target.tagName", event.target.tagName);
+          if (event.target.tagName === "BUTTON") {
+            // Alter con al valor del atributo data-id
+            alert(`Botón con ID: ${event.target.dataset.id}`);
+          }
+        });
+    </script>
+    <!-- Tiene un evento onclick, con un parametro event que representa el evento de click que ocurre -->
+    <a href="https://google.es" onclick="accion(event)">Ir a Google</a>
+    <script>
+      function accion(event) {
+        // Se bloquea para no ir al enlace
+        event.preventDefault();
+        console.log("No se irá a Google");
+      }
+    </script>
+
+    <button id="editar">Editar Persona</button>
+    <script>
+      // Se declara un objeto. Actuara como manejador de eventos, por el handleEvent
+      let editarPersona = {
+        // Se define el metodo, que se ajacuta cuando acurra un evento
+        // Evento: contiene informacion sobre el evento que ocurrio
+        handleEvent: function (evento) {
+          alert(`Editando a ${this.datosPersona.nombre}`);
+        },
+        // Propiedad interna del obejto que guarda infromacion sobre la persona.
+        datosPersona: {
+          nombre: "Ana",
+          apellido: "López",
+        },
+      };
+      let botonEditar = document.getElementById("editar");
+      // Se agrega escuchador de eventos para el evento "click". El lugar de pasar un funcion, se pasa el objeto editarPersona.
+      botonEditar.addEventListener("click", editarPersona);
+    </script>
+  </body>
+</html>

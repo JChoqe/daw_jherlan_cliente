@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mi Zona de Trabajo Node.js</title>
+  <style>
+    :root {
+      --bg: #f8f9fa;
+      --card: #ffffff;
+      --text: #2c3e50;
+      --accent: #3498db;
+      --gray: #7f8c8d;
+      --success: #27ae60;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem 1rem;
+      line-height: 1.7;
+    }
+
+    .card {
+      background: var(--card);
+      padding: 2.5rem 2rem;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      max-width: 580px;
+      width: 100%;
+      text-align: center;
+      border: 1px solid #e9ecef;
+    }
+
+    h1 {
+      font-size: 1.9rem;
+      color: var(--text);
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .server-line {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      font-size: 1.1rem;
+      color: var(--text);
+      margin: 1.2rem 0;
+      font-weight: 500;
+    }
+
+    .server-line i {
+      color: var(--accent);
+    }
+
+    .tag {
+      display: inline-block;
+      background: #e3f2fd;
+      color: var(--accent);
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin: 0.3rem;
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #d5f5e3;
+      color: var(--success);
+      padding: 0.4rem 1rem;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-top: 1.2rem;
+    }
+
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      color: var(--gray);
+      font-size: 0.95rem;
+    }
+
+    .divider {
+      height: 1px;
+      background: #dee2e6;
+      width: 80px;
+      margin: 1rem auto;
+      border-radius: 1px;
+    }
+
+    .coffee {
+      color: #d35400;
+    }
+  </style>
+
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <div class="card">
+      <h1>Bienvenido a mi zona de trabajo Node.js</h1>
+      <div class="server-line">
+          <i class="fas fa-server"></i>
+          <span>Servidor <span class="tag">Node.js</span> en <span class="tag">Express</span></span>
+          <i class="fas fa-check-circle" style="color:#27ae60;"></i>
+      </div>
+      <p>Entorno listo para <strong>desarrollar</strong>, <strong>aprender</strong> y <strong>experimentar</strong>.</p>
+      <div class="status">
+          <i class="fas fa-circle"></i>
+          Sistema activo y funcionando
+      </div>
+  </div>
+
+  <footer>
+      <p>Desarrollado con paciencia <span class="coffee">y café</span> —
+          <strong id="fecha"></strong>
+      </p>
+      <div class="divider"></div>
+      <p>© <span id="anio"></span> Jherlan Choque</p>
+  </footer>
+
+  <script>
+    // JS para fecha dinámica
+    const fecha = new Date();
+    const dia = String(fecha.getDate()).padStart(2, '0');
+    const mes = String(fecha.getMonth() + 1).padStart(2, '0');
+    const anio = fecha.getFullYear();
+
+    document.getElementById('fecha').textContent = `${dia}/${mes}/${anio}`;
+    document.getElementById('anio').textContent = anio;
+  </script>
+</body>
+</html>
