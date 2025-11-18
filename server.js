@@ -66,6 +66,7 @@ app.get('/sesion3/Ejemplo1', (req, res) => {
 app.get('/sesion3/Ejemplo2', (req, res) => {
   res.sendFile(path.join(__dirname, 'sesion3', 'ejemplo2.html'));
 });
+
 // -- SESION 3
 // Puerto por el que escucha
 app.listen(3000, () => {
