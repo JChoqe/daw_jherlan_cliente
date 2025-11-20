@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <template id="mi-boton">
+      <button>Mi Botón</button>
+    </template>
+    <script>
+      let plantilla = document.getElementById("mi-boton");
+      let contenido = plantilla.content.cloneNode(true);
+      document.body.append(contenido);
+    </script>
+
+    <template id="mi-componente-template">
+      <style>
+        div {
+          padding: 10px;
+          border: 1px solid #aaa;
+        }
+      </style>
+      <div>
+        <slot name="titulo">Título por defecto</slot>
+        <br />
+        <slot name="contenido">Contenido por defecto</slot>
+      </div>
+    </template>
+    <script>
+      class MiComponente extends HTMLElement {
+        constructor() {
+          super();
+          const template = document.getElementById("mi-componente-template");
+          const clone = template.content.cloneNode(true);
+
+          const shadow = this.attachShadow({ mode: "open" });
+          shadow.appendChild(clone);
+        }
+      }
+
+      customElements.define("mi-componente", MiComponente);
+    </script>
+    <mi-componente>
+      <h2 slot="titulo">Hola Mundo</h2>
+      <p slot="contenido">Este es un texto dentro del slot.</p>
+    </mi-componente>
+  </body>
+</html>

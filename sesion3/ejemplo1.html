@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-  </head>
-  <body>
+</head>
+<body>
+    
     <div id="divEjemplo"></div>
     <script>
-      let div = document.getElementById("divEjemplo");
-      // Creo y elimino el falsitributo="valor";
-      div.setAttribute("falsitributo", "valor");
-      div.removeAttribute("falsitributo");
-      // Creo una clase con el nombre aaa que se añade al unico div existente.
-      div.className = "aaa";
-      div.style = "background-color:#c0c0c0";
-      div.innerText = "texto interno";
+        let div=document.getElementById('divEjemplo');
+        div.setAttribute('falsitributo','valor'); 
+
+        div.removeAttribute('falsitributo');
+
+        div.className='aaa';
+        div.style="background-color:#c0c0c0";
+        div.innerText="texto interno";
     </script>
-  </body>
+    
+</body>
 </html>

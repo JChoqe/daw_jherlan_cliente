@@ -59,15 +59,43 @@ app.get('/sesion2/EjercicioComics', (req, res) => {
   res.sendFile(path.join(__dirname, 'sesion2/EjercicioComics', 'EjercicioComics.html'));
 });
 // -- SESION 2
-// ++ SESION 3
+//++ SESION3
 app.get('/sesion3/Ejemplo1', (req, res) => {
   res.sendFile(path.join(__dirname, 'sesion3', 'ejemplo1.html'));
 });
 app.get('/sesion3/Ejemplo2', (req, res) => {
   res.sendFile(path.join(__dirname, 'sesion3', 'ejemplo2.html'));
 });
+app.get('/sesion3/ejemploComponent', (req, res) => {
+  res.sendFile(path.join(__dirname, 'sesion3/ejemploComponent', 'index.html'));
+});
 
-// -- SESION 3
+app.get('/sesion3/ejercicioPokemon', (req, res) => {
+  res.sendFile(path.join(__dirname, 'sesion3/ejercicioPokemon', 'index.html'));
+});
+app.get('/sesion3/ejercicioPokemon2', (req, res) => {
+  res.sendFile(path.join(__dirname, 'sesion3/ejercicioPokemon2', 'index2.html'));
+});
+app.get('/sesion3/Ejemplo4', (req, res) => {
+  res.sendFile(path.join(__dirname, 'sesion3', 'ejemplo4.html'));
+});
+app.get('/sesion3/Ejemplo5', (req, res) => {
+  res.sendFile(path.join(__dirname, 'sesion3', 'ejemplo5.html'));
+});
+app.get('/sesion3/ejercicioStarwars', (req, res) => {
+  res.sendFile(path.join(__dirname, 'sesion3/ejercicioStarwars', 'index.html'));
+});
+// ejericicioFinal
+app.get('/sesion3/ejercicioFinal', (req, res) => {
+  res.sendFile(path.join(__dirname, 'sesion3/ejercicioFinal', 'index.html'));
+});
+app.get('/sesion3/ejercicioFinal/articulo', (req, res) => {
+  res.sendFile(path.join(__dirname, 'sesion3/ejercicioFinal', '/articulo/articulo.html'));
+});
+app.get('/sesion3/ejercicioFinal/listado', (req, res) => {
+  res.sendFile(path.join(__dirname, 'sesion3/ejercicioFinal', '/listado/listado.html'));
+});
+//-- SESION3
 // Puerto por el que escucha
 app.listen(3000, () => {
   console.log('Servidor corriendo en http://localhost:3000');

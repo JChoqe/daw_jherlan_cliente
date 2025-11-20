@@ -1,0 +1,700 @@
+#contenido {
+    width: 100%;
+}
+
+.ancho80 {
+    width: 80%;
+    background-color: blueviolet;
+}
+
+aside {
+    width: 20%;
+    background-color: burlywood;
+}
+
+#principal {
+    border: 1px solid black;
+    margin: 0 auto;
+    box-sizing: border-box;
+    width: 80%;
+    height: 100%;
+}
+
+.articulo {
+    padding: 5px;
+    border-radius: 2%;
+    border: 1px solid darkblue;
+
+    img {
+        width: 100%;
+    }
+
+
+
+    h1 {
+        width: 100%;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 13px;
+        font-weight: bold;
+        color: brown;
+    }
+
+    ;
+}
+
+#not3 {
+    width: 100%;
+
+}
+
+.dimensiones {
+    column-width: 50%;
+    padding: 5px;
+    background-color: beige;
+
+    div {
+        width: 100%;
+        height: 25px;
+    }
+}
+
+p {
+    width: 100%;
+    font-size: 10px;
+    color: darkgray;
+
+    span {
+        font-weight: bold;
+        font-style: italic;
+    }
+}
+
+.fuente_p {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+
+.ancho_col {
+    column-width: 50%;
+
+    .tamano_cuadro {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+#cuadro1 {
+    background-color: chartreuse;
+    border: 6px dotted blue;
+}
+
+div [class="tamano_cuadro"] {
+    background-color: red;
+    border: 6px solid pink;
+}
+
+#cuadro3 {
+    background-color: brown;
+    border: 6px dotted black;
+}
+
+#cuadro4 {
+    background-color: yellow;
+    border: 6px solid violet;
+}
+
+.lOrd>li {
+    color: green;
+}
+
+.ancho_col .tamano_cuadro ul li:first-child {
+    color: blue;
+}
+
+.boton:active {
+    background-color: orange;
+}
+
+.span_negrita>span:first-child {
+    background-color: blueviolet;
+}
+
+#cuadro3~#cuadro4 {
+    border-radius: 20px;
+}
+
+/* ++EJERCICIOS DIVS INTERIORES */
+.alto100 {
+    height: 100%;
+}
+
+#divsinteriores {
+    width: 80%;
+
+    div {
+        width: 80%;
+        height: 80%;
+        margin: auto;
+        display: grid;
+        place-items: center;
+    }
+}
+
+#divint1 {
+    border-radius: 30px;
+    border: 3px solid blue;
+    background-color: crimson;
+}
+
+#divint2 {
+    border-radius: 30px;
+    border: 3px solid green;
+    background-color: beige;
+    box-shadow: 10px 10px 10px orange;
+}
+
+#divint3 {
+    border-radius: 30px;
+    border: 3px solid green;
+    background-color: #eeff04;
+    margin-left: 10px !important;
+}
+
+#divint4 {
+    border-radius: 30px;
+    border: 3px solid rgb(232, 52, 82);
+    background-color: violet;
+    box-shadow: 10px 10px 10px rgba(129, 217, 237, 0.549) inset;
+}
+
+
+/* --EJERCICIOS DIVS INTERIORES */
+
+/* ++EJERCICIOS DIVS ZIGURAT */
+#divzigurat {
+    width: 80%;
+
+    div {
+        border: 1px solid saddlebrown;
+        box-sizing: border-box;
+    }
+}
+
+.tamanopor {
+    top: 17%;
+    left: 17%;
+    bottom: 17%;
+    right: 17%;
+    width: 66%;
+    height: 66%;
+}
+
+.ponermediorel {
+    position: absolute;
+}
+
+#plantabaja {
+    position: relative;
+}
+
+.filapeq {
+    height: 17%;
+    width: 100%;
+    background-color: #eeff04;
+}
+
+.filamed {
+    height: 66%;
+    width: 100%;
+    background-color: azure;
+}
+
+.fuente {
+    display: inline-block;
+    width: 16%;
+    height: 100%;
+    background-color: aqua;
+
+    img {
+        margin: auto;
+        display: grid;
+        place-items: center;
+        width: 80%;
+        height: 80%;
+        margin-top: 5px;
+    }
+}
+
+.escaleras {
+    width: 66%;
+    height: 100%;
+    display: inline-block;
+    background-color: blueviolet;
+}
+
+.escalon {
+    width: 33%;
+    height: 33%;
+    background-color: cadetblue;
+    margin: auto;
+}
+
+#plantatercera {
+    img {
+        width: 80%;
+        height: 80%;
+        position: relative;
+        top: 10%;
+        left: 10%;
+        right: 10%;
+        bottom: 10%;
+    }
+}
+
+/* --EJERCICIOS DIVS ZIGURAT */
+
+/* ++EJERCICIOS DIVS RESPONSIVE */
+@media screen and (max-width: 430px) {
+    body {
+        max-width: 400px;
+    }
+}
+
+@media screen and (min-width: 640px) and (max-width: 1280px) {
+    body {
+        max-width: 1100px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    body {
+        width: 100%;
+    }
+}
+
+main {
+    display: flex;
+    width: 100%;
+}
+
+/* --EJERCICIOS DIVS RESPONSIVE */
+
+/* ++EJERCICIOS DIVS 4 EN RAYA */
+.orgtablero {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 250px;
+    width: 100%;
+}
+
+.col_tablero {
+    height: 200px;
+    display: inherit;
+    flex-basis: 50px;
+    flex-direction: column;
+
+    .celda_col {
+        height: 50px;
+        display: inherit;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #000000;
+    }
+}
+
+.empujada {
+    align-self: flex-end;
+}
+
+.circulo {
+    border-radius: 100%;
+    height: 30px;
+    flex-basis: 30px;
+
+}
+
+.azul {
+    border: 1px solid blue;
+    background-color: aqua;
+}
+
+.rojo {
+    border: 1px solid crimson;
+    background-color: red;
+}
+
+
+/* --EJERCICIOS DIVS 4 EN RAYA */
+/* ++EJERCICIOS DIVS AniMACIONES */
+.imagen {
+    background-size: contain;
+}
+
+#img1 {
+    background-image: url('../Imagenes/Ani1.jpg');
+    animation: cambiarImg1 36s infinite;
+}
+
+#img2 {
+    background-image: url('../Imagenes/Ani2.jpg');
+    animation: cambiarImg2 36s infinite;
+}
+
+#img3 {
+    background-image: url('../Imagenes/Ani3.jpg');
+    animation: cambiarImg3 36s infinite;
+}
+
+#img4 {
+    background-image: url('../Imagenes/Ani4.jpg');
+    animation: cambiarImg4 36s infinite;
+}
+
+#img5 {
+    background-image: url('../Imagenes/Ani5.jpg');
+    animation: cambiarImg5 36s infinite;
+}
+
+#img6 {
+    background-image: url('../Imagenes/Ani6.jpg');
+    animation: cambiarImg6 36s infinite;
+}
+
+@keyframes cambiarImg1 {
+    0% {
+        background-image: url('../Imagenes/Ani1.jpg');
+    }
+
+    16% {
+        background-image: url('../Imagenes/Ani2.jpg');
+    }
+
+    32% {
+        background-image: url('../Imagenes/Ani3.jpg');
+    }
+
+    48% {
+        background-image: url('../Imagenes/Ani4.jpg');
+    }
+
+    64% {
+        background-image: url('../Imagenes/Ani5.jpg');
+    }
+
+    80% {
+        background-image: url('../Imagenes/Ani6.jpg');
+    }
+
+    100% {
+        background-image: url('../Imagenes/Ani1.jpg');
+    }
+}
+
+@keyframes cambiarImg2 {
+    0% {
+        background-image: url('../Imagenes/Ani2.jpg');
+    }
+
+    16% {
+        background-image: url('../Imagenes/Ani3.jpg');
+    }
+
+    32% {
+        background-image: url('../Imagenes/Ani4.jpg');
+    }
+
+    48% {
+        background-image: url('../Imagenes/Ani5.jpg');
+    }
+
+    64% {
+        background-image: url('../Imagenes/Ani6.jpg');
+    }
+
+    80% {
+        background-image: url('../Imagenes/Ani1.jpg');
+    }
+
+    100% {
+        background-image: url('../Imagenes/Ani2.jpg');
+    }
+}
+
+@keyframes cambiarImg3 {
+    0% {
+        background-image: url('../Imagenes/Ani3.jpg');
+    }
+
+    16% {
+        background-image: url('../Imagenes/Ani4.jpg');
+    }
+
+    32% {
+        background-image: url('../Imagenes/Ani5.jpg');
+    }
+
+    48% {
+        background-image: url('../Imagenes/Ani6.jpg');
+    }
+
+    64% {
+        background-image: url('../Imagenes/Ani1.jpg');
+    }
+
+    80% {
+        background-image: url('../Imagenes/Ani2.jpg');
+    }
+
+    100% {
+        background-image: url('../Imagenes/Ani3.jpg');
+    }
+}
+
+@keyframes cambiarImg4 {
+    0% {
+        background-image: url('../Imagenes/Ani4.jpg');
+    }
+
+    16% {
+        background-image: url('../Imagenes/Ani5.jpg');
+    }
+
+    32% {
+        background-image: url('../Imagenes/Ani6.jpg');
+    }
+
+    48% {
+        background-image: url('../Imagenes/Ani1.jpg');
+    }
+
+    64% {
+        background-image: url('../Imagenes/Ani2.jpg');
+    }
+
+    80% {
+        background-image: url('../Imagenes/Ani3.jpg');
+    }
+
+    100% {
+        background-image: url('../Imagenes/Ani4.jpg');
+    }
+}
+
+@keyframes cambiarImg5 {
+    0% {
+        background-image: url('../Imagenes/Ani5.jpg');
+    }
+
+    16% {
+        background-image: url('../Imagenes/Ani6.jpg');
+    }
+
+    32% {
+        background-image: url('../Imagenes/Ani1.jpg');
+    }
+
+    48% {
+        background-image: url('../Imagenes/Ani2.jpg');
+    }
+
+    64% {
+        background-image: url('../Imagenes/Ani3.jpg');
+    }
+
+    80% {
+        background-image: url('../Imagenes/Ani4.jpg');
+    }
+
+    100% {
+        background-image: url('../Imagenes/Ani5.jpg');
+    }
+}
+
+@keyframes cambiarImg6 {
+    0% {
+        background-image: url('../Imagenes/Ani6.jpg');
+    }
+
+    16% {
+        background-image: url('../Imagenes/Ani1.jpg');
+    }
+
+    32% {
+        background-image: url('../Imagenes/Ani2.jpg');
+    }
+
+    48% {
+        background-image: url('../Imagenes/Ani3.jpg');
+    }
+
+    64% {
+        background-image: url('../Imagenes/Ani4.jpg');
+    }
+
+    80% {
+        background-image: url('../Imagenes/Ani5.jpg');
+    }
+
+    100% {
+        background-image: url('../Imagenes/Ani6.jpg');
+    }
+}
+
+@keyframes cambiarImagenes {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    16% {
+        transform: rotate(60deg);
+
+    }
+
+    32% {
+        transform: rotate(120deg);
+    }
+
+    48% {
+        transform: rotate(180deg);
+    }
+
+    64% {
+        transform: rotate(240deg);
+    }
+
+    80% {
+        transform: rotate(300deg);
+
+    }
+
+    100% {
+        transform: rotate(360deg);
+
+    }
+}
+
+:root {
+    --img1: url('../Imagenes/Ani1.jpg');
+    --img2: url('../Imagenes/Ani2.jpg');
+    --img3: url('../Imagenes/Ani3.jpg');
+    --img4: url('../Imagenes/Ani4.jpg');
+    --img5: url('../Imagenes/Ani5.jpg');
+    --img6: url('../Imagenes/Ani6.jpg');
+}
+
+.ancho100 {
+    width: 100%;
+}
+
+.grid3x2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    animation: cambiarImagenes 32s infinite;
+    background-color: #eeff04;
+    height: 100%;
+}
+
+/* --EJERCICIOS DIVS AniMACIONES */
+
+/* ++EJERCICIOS DOM Y EVENTOS */
+.ancho50{
+    img{
+        width: 50px;
+    }
+    img:hover{
+        border: 3px solid #ec8585;
+    }
+    flex-basis: 50px;
+    width: 50px;
+    cursor: pointer;
+    border: 1px solid #c0c0c0;
+}
+.ancho500{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: flex-start;
+    width: 500px;
+    box-sizing:content-box;
+}
+/* --EJERCICIOS DOM Y EVENTOS */
+
+/* ++EJERCICIOS DOM Y EVENTOS2 */
+.padre{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: flex-start;
+    width: 1000px;
+    box-sizing:content-box;
+}
+.hijo{
+    img{
+        width: 200px;
+        cursor: pointer;
+    }
+    img:hover{
+        border: 3px solid #ec8585;
+    }
+    a{
+        text-decoration: none;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: #ec8585;
+    }
+    a:hover{
+        font-weight: bold;
+    }
+    text-align: center;
+    flex-basis: 200px;
+    width: 200px;
+    border: 1px solid #c0c0c0;
+}
+/* --EJERCICIOS DOM Y EVENTOS2 */
+
+/* Estilo general para los Pokémon */
+#divPrincipal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  width: 500px;
+  margin: auto;
+}
+
+/* Cada Pokémon: imagen + nombre */
+.pokemon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 8px;
+  background-color: #fafafa;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Imagen del Pokémon */
+.pokemon img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+/* Efecto hover */
+.pokemon:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Nombre del Pokémon debajo */
+.pokemon .nombre {
+  margin-top: 6px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color: #ec8585;
+  text-transform: capitalize;
+  text-align: center;
+}
