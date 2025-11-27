@@ -90,10 +90,20 @@ app.get('/sesion3/ejercicioFinal', (req, res) => {
   res.sendFile(path.join(__dirname, 'sesion3/ejercicioFinal', 'index.html'));
 });
 app.get('/sesion3/ejercicioFinal/articulo', (req, res) => {
-  res.sendFile(path.join(__dirname, 'sesion3/ejercicioFinal', '/articulo/articulo.html'));
+  res.sendFile(path.join(__dirname, 'sesion3/ejercicioFinal', 'articulo.html'));
 });
 app.get('/sesion3/ejercicioFinal/listado', (req, res) => {
-  res.sendFile(path.join(__dirname, 'sesion3/ejercicioFinal', '/listado/listado.html'));
+  res.sendFile(path.join(__dirname, 'sesion3/ejercicioFinal', 'listado.html'));
+});
+// ejercicioDBv1
+app.get('/sesion3/ejercicioDBv1', (req, res) => {
+  res.sendFile(path.join(__dirname, 'sesion3/ejercicioDBv1', 'index.html'));
+});
+app.get('/sesion3/ejercicioDBv1/listado', (req, res) => {
+  res.sendFile(path.join(__dirname, 'sesion3/ejercicioDBv1', 'listado.html'));
+});
+app.get('/sesion3/ejercicioDBv1/articulo', (req, res) => {
+  res.sendFile(path.join(__dirname, 'sesion3/ejercicioDBv1', 'articulo.html'));
 });
 //-- SESION3
 // Puerto por el que escucha

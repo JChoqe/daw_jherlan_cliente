@@ -1,0 +1,224 @@
+/* Ficha detallada estilo Dragon Ball */
+.main-ficha {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.ficha-container {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 40px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 20px;
+    padding: 40px;
+    border: 3px solid var(--casa-color);
+    box-shadow: 0 0 40px var(--casa-color);
+}
+
+/* Imagen grande */
+.ficha-imagen {
+    position: relative;
+}
+
+.imagen-frame {
+    width: 100%;
+    height: 550px;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 4px solid var(--casa-color);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8));
+}
+
+.personaje-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.imagen-frame:hover .personaje-img {
+    transform: scale(1.05);
+}
+
+.casa-badge {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--casa-color);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.8);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Detalles */
+.ficha-detalles {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.ficha-nombre {
+    font-size: 3rem;
+    color: #ffd700;
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+    margin-bottom: 10px;
+}
+
+.ficha-apodos {
+    font-size: 1.2rem;
+    color: #b0b0b0;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+/* Stats estilo DBZ */
+.ficha-stats {
+    display: grid;
+    gap: 15px;
+}
+
+.stat {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 15px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border-left: 4px solid var(--casa-color);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.stat:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(5px);
+}
+
+.stat-label {
+    font-weight: bold;
+    color: var(--casa-color);
+    font-size: 1rem;
+}
+
+.stat-value {
+    color: #e0e0e0;
+    font-size: 1rem;
+}
+
+/* Botones */
+.ficha-botones {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.btn-ficha {
+    flex: 1;
+    min-width: 120px;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.btn-volver {
+    background: #555;
+    color: white;
+}
+
+.btn-volver:hover {
+    background: #777;
+    transform: translateY(-3px);
+}
+
+.btn-casas {
+    background: var(--casa-color);
+    color: white;
+}
+
+.btn-casas:hover {
+    filter: brightness(1.2);
+    transform: translateY(-3px);
+}
+
+.btn-norhouse {
+    background: #2a2a2a;
+    color: #b0b0b0;
+}
+
+.btn-norhouse:hover {
+    background: #3a3a3a;
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Error container */
+.error-container {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.error-container h1 {
+    font-size: 2.5rem;
+    color: #ff4444;
+    margin-bottom: 30px;
+}
+
+.error-container .btn-volver {
+    display: inline-block;
+    padding: 15px 40px;
+    background: #555;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+    .ficha-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 30px 20px;
+    }
+    
+    .imagen-frame {
+        height: 450px;
+    }
+    
+    .ficha-nombre {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+    
+    .ficha-apodos {
+        text-align: center;
+    }
+    
+    .stat {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+    
+    .ficha-botones {
+        flex-direction: column;
+    }
+    
+    .btn-ficha {
+        width: 100%;
+    }
+}

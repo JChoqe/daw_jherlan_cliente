@@ -1,0 +1,114 @@
+/* Personajes sin casa */
+.main-norhouse {
+    padding: 40px 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.norhouse-header {
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    border: 2px solid #6a6a6a;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8);
+}
+
+.norhouse-header h1 {
+    font-size: 3rem;
+    color: #9a9a9a;
+    text-shadow: 0 0 20px rgba(150, 150, 150, 0.5);
+    margin-bottom: 15px;
+}
+
+.norhouse-contador {
+    font-size: 1.3rem;
+    color: #b0b0b0;
+}
+
+.grid-norhouse {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+/* Cards sin casa */
+.card-norhouse {
+    background: linear-gradient(145deg, rgba(40, 40, 50, 0.9), rgba(30, 30, 40, 0.9));
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(150, 150, 150, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+.card-norhouse:hover {
+    transform: translateY(-8px) scale(1.03);
+    border-color: #9a9a9a;
+    box-shadow: 0 8px 30px rgba(150, 150, 150, 0.4);
+}
+
+.card-norhouse .card-img-container {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8));
+}
+
+.card-norhouse .card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    filter: grayscale(30%);
+}
+
+.card-norhouse:hover .card-img {
+    transform: scale(1.1);
+    filter: grayscale(0%);
+}
+
+.card-norhouse .card-info {
+    padding: 15px;
+}
+
+.card-norhouse .card-nombre {
+    font-size: 1.2rem;
+    color: #c0c0c0;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.card-norhouse .card-apodos {
+    font-size: 0.85rem;
+    color: #a0a0a0;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 10px;
+    min-height: 20px;
+}
+
+.card-norhouse .card-año {
+    font-size: 0.9rem;
+    color: #b0b0b0;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .norhouse-header h1 {
+        font-size: 2rem;
+    }
+    
+    .grid-norhouse {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 15px;
+    }
+    
+    .card-norhouse .card-img-container {
+        height: 220px;
+    }
+}

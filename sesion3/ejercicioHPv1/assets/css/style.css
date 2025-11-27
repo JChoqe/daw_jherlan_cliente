@@ -1,0 +1,138 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    color: #f0f0f0;
+    min-height: 100vh;
+}
+
+#app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Loader */
+.loader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.loader h1 {
+    font-size: 2rem;
+    color: #ffd700;
+    margin-bottom: 30px;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.spinner {
+    width: 60px;
+    height: 60px;
+    border: 6px solid rgba(255, 215, 0, 0.2);
+    border-top-color: #ffd700;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Header */
+.header-hp {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7));
+    padding: 20px;
+    border-bottom: 3px solid #ffd700;
+    box-shadow: 0 4px 20px rgba(255, 215, 0, 0.3);
+}
+
+.logo-principal {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo-principal h1 {
+    font-size: 2.5rem;
+    color: #ffd700;
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+    letter-spacing: 3px;
+}
+
+.nav-casas {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.casa-link {
+    padding: 12px 25px;
+    background: var(--casa-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.casa-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+}
+
+.casa-link span {
+    font-size: 1.3rem;
+}
+
+/* Footer */
+.footer-hp {
+    background: rgba(0, 0, 0, 0.9);
+    color: #a0a0a0;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: auto;
+    border-top: 2px solid #ffd700;
+}
+
+.footer-hp p {
+    margin: 5px 0;
+}
+
+.footer-hp a {
+    color: #ffd700;
+    text-decoration: none;
+}
+
+.footer-hp a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .logo-principal h1 {
+        font-size: 1.8rem;
+    }
+    
+    .nav-casas {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .casa-link {
+        justify-content: center;
+    }
+}
