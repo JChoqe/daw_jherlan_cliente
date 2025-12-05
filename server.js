@@ -105,6 +105,13 @@ app.get('/sesion3/ejercicioDBv1/listado', (req, res) => {
 app.get('/sesion3/ejercicioDBv1/articulo', (req, res) => {
   res.sendFile(path.join(__dirname, 'sesion3/ejercicioDBv1', 'articulo.html'));
 });
+// rubrica3RyM
+app.get('/sesion3/rubrica3RyM', (req, res) => {
+  res.sendFile(path.join(__dirname, 'sesion3/rubrica3RyM', 'index.html'));
+});
+app.get('/sesion3/rubrica3RyM/articulo', (req, res) => {
+  res.sendFile(path.join(__dirname, 'sesion3/rubrica3RyM', 'articulo.html'));
+});
 //-- SESION3
 // Puerto por el que escucha
 app.listen(3000, () => {
